@@ -1273,7 +1273,8 @@ hr.grey{
 .video-desc-list__bord--center{
     position: relative;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     padding: 0 10px;
 }
 .video-desc-list__bord--no-mar{
