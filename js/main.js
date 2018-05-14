@@ -373,11 +373,11 @@ $(document).ready(function(){
 
 	if (windowWidth >= 1000) {
 		videoHolderFirst.after("<video class='column3__video' loop autoplay muted playsinline><source src=" + videosHigh[0] + " type='video/mp4'>Your browser does not support the video tag.</video>");
-		videoHolderSecond.after("<video class='column3__video' loop autoplay muted playsinline><source src=" + videosHigh[1] + " type='video/mp4'>Your browser does not support the video tag.</video>");
+		videoHolderSecond.after("<video class='column3__video column3__video--reverse' loop autoplay muted playsinline><source src=" + videosHigh[1] + " type='video/mp4'>Your browser does not support the video tag.</video>");
 		videoHolderThird.after("<video class='column3__video' loop autoplay muted playsinline><source src=" + videosHigh[2] + " type='video/mp4'>Your browser does not support the video tag.</video>");
 	}else{
 		videoHolderFirst.after("<center><video class='column3__video' loop autoplay muted playsinline><source src=" + videosLow[0] + " type='video/mp4'>Your browser does not support the video tag.</video></center>");
-		videoHolderSecond.after("<center><video class='column3__video' loop autoplay muted playsinline><source src=" + videosLow[1] + " type='video/mp4'>Your browser does not support the video tag.</video></center>");
+		videoHolderSecond.after("<center><video class='column3__video column3__video--reverse' loop autoplay muted playsinline><source src=" + videosLow[1] + " type='video/mp4'>Your browser does not support the video tag.</video></center>");
 		videoHolderThird.after("<center><video class='column3__video' loop autoplay muted playsinline><source src=" + videosLow[2] + " type='video/mp4'>Your browser does not support the video tag.</video></center>");
 	}
 	
@@ -422,7 +422,19 @@ $(document).ready(function(){
 			wordCounter = 0;
 		}
 	}
-	setInterval(wordAnimator, 1500)
+	setInterval(wordAnimator, 1500);
+
+	// fixed top header
+	var fixedHeader = $('.header');
+	var stickyHeader = fixedHeader.offset().top;
+	
+	$(window).scroll(function () {
+		if($(window).scrollTop() >= stickyHeader){
+			fixedHeader.addClass('fixed-upper-header');			
+		}else{
+			fixedHeader.removeClass('fixed-upper-header');			
+		}
+	})
 	
 	
 });

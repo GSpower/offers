@@ -78,7 +78,8 @@ h3.white{
     font-weight: 400;
 }
 .header{
-    background-color:#212121;
+    /* background-color:#212121; */
+    background-color: rgba(33, 33, 33, 0.9);
     padding:15px 0px 15px 0px;
     text-align:center;
     color:#ffffff;
@@ -87,6 +88,7 @@ h3.white{
     width:100% !important;
     margin-bottom:0px;
     margin-top:0px;
+    z-index: 100;
 }
 .navigation{
     background-color:#303030;
@@ -288,6 +290,24 @@ table.center{
     content: "";
     clear: both;
     display: table;
+}
+.zoe-logo{
+    width: 101px;
+    height: 32px;
+    /* margin: 0 auto; */
+    margin-left: 15px;
+}
+.zoe-logo img{
+    width: 100%;
+}
+.qyksonic-logo{
+    margin: 10px 0;
+    width: 233px;
+    height: 32px;
+    margin-left: 15px;
+}
+.qyksonic-logo img{
+    width: 100%;
 }
 .footer{
     background-color:#212121;
@@ -580,6 +600,9 @@ hr.grey{
     color: white;
     margin-bottom: 60px;
 }
+.column3__video--reverse{
+    float: left;
+}
 .column3__video-header{
     font-weight: 400;
     font-size: 28px;
@@ -849,6 +872,7 @@ hr.grey{
 	width:100%;
 	height:100%;
 } */
+
 .video-overlay-popup__video-wrap{
     display: none;
 
@@ -1202,6 +1226,9 @@ hr.grey{
     width: 44%;
     display: inline-block;
 }
+.video-desc-list--reverse{
+    float: right;
+}
 .video-desc-list__filled{
     background-color: #6f6e6e;
     color: #dfdfdf;
@@ -1387,14 +1414,20 @@ hr.grey{
 .js-ls{
     letter-spacing: 5px;
 }
-/* .column2--desktop__image{
-    display: block;
-    background-image: url(https://qyksonic.imgix.net/zoe-blue.jpg);
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 800px;
-} */
+.upper-header{
+    background: white;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.fixed-upper-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.header__container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
 @media (max-width: 600px) {
     .column__btn .next--top-btn:hover{
      padding: 5px 0 !important;
@@ -1422,6 +1455,10 @@ hr.grey{
     }
     .video-desc-list{
         width: 100%;
+    }
+    .video-desc-list--reverse{
+        /* display: none; */
+        float: none;
     }
     .stars--ls{
         letter-spacing: -0.1rem;
@@ -1514,6 +1551,10 @@ hr.grey{
         width:100%;
         float:none;
         margin-bottom: 0;
+    }
+    .column3__video--reverse{
+        /* display: none; */
+        float: none;
     }
     .column3__video-header{
         font-size: 22px;
