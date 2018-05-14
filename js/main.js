@@ -397,5 +397,32 @@ $(document).ready(function(){
 		videoInsideModal.attr('src', videoInsideModal.attr('src'));
 		
 	})
+
+	// word animation
+	var wordPlaceholder = $('.js-animate');
+	
+	var wordToAnimate = [
+		"UNCOVER",
+		"REVIVE",
+		"MAINTAIN"
+	]
+	var wordCounter = 0;
+	wordPlaceholder.text(wordToAnimate[0]);
+	
+	function wordAnimator() {
+		wordPlaceholder.text(wordToAnimate[wordCounter]);
+		wordCounter++;
+		
+		if(wordCounter == 2){
+			wordPlaceholder.addClass("js-ls")
+		}else{
+			wordPlaceholder.removeClass("js-ls")
+		}
+		if (wordCounter == wordToAnimate.length) {
+			wordCounter = 0;
+		}
+	}
+	setInterval(wordAnimator, 1500)
+	
 	
 });

@@ -1384,6 +1384,9 @@ hr.grey{
 .column2--mobile{
     display: none;
 }
+.js-ls{
+    letter-spacing: 5px;
+}
 /* .column2--desktop__image{
     display: block;
     background-image: url(https://qyksonic.imgix.net/zoe-blue.jpg);
