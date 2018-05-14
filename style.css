@@ -22,6 +22,10 @@
   cursor: default;
 }
 
+.shopify-section--mar{
+  margin-top: 25px;
+}
+
 .shopify-payment-button__button--unbranded {
   background-color: #1990c6;
   padding: 1em 2em;

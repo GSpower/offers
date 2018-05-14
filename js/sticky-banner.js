@@ -111,9 +111,8 @@ $(document).ready(function(){
 			foot.addClass('fixed-footer--display');
 		
 		}
-		if($(this).scrollTop()>=$('#content-stop').position().top){
-			foot.removeClass('fixed-footer--display');
-		}if($(this).scrollTop()<=$('#fix-start').position().top){
+
+		if($(this).scrollTop()<=$('#fix-start').position().top){
 			foot.removeClass('fixed-footer--display');
 		}
 	})
