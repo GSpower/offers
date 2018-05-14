@@ -442,11 +442,11 @@ table.center{
 }
 /* animated words */
 .no-animate{
-    display: none;
+    /* display: none; */
 }
 .animated-words{
     display: inline-block;
-    font-size: 36px;
+    font-size: 2.4vw;
     width: 170px;
 }
 .animated-words span:nth-child(2) {
@@ -600,7 +600,8 @@ hr.grey{
 }
 .column__btn{
     display: inline-block;
-    width: 200px;
+    /* width: 200px; */
+    width: 47%;
     margin-right: 45px;
 }
 .column__btn:last-child{
@@ -1135,14 +1136,19 @@ hr.grey{
 }
 .inside-white--header{
     position: relative;
-    min-height: 590px;
+    
+    width: 100%;
+    max-width: 95%;
 }
 .inside-white--header .column{
     z-index: 5;
     position: relative;
     text-align: left;
-    width: 62%;
-    margin-top: 80px;
+   
+    width: 40%;
+   
+    margin-top: 10vw;
+    max-width: 520px;
 }
 .inside-white--header .column2{
     position: absolute;
@@ -1156,7 +1162,7 @@ hr.grey{
     text-align: left;
 }
 .column__header{
-    font-size: 36px;
+    font-size: 2.4vw;
     text-align: left;
     font-weight: 300;
     margin: 0;
@@ -1169,7 +1175,7 @@ hr.grey{
 }
 .column__desc{
     
-    font-size: 17px;
+    font-size: 1.1rem;
     line-height: 180%;
 }
 .column__desc p{
@@ -1364,6 +1370,28 @@ hr.grey{
 .bbb-rating--lower{
     display: none;
 }
+.column2--mobile{
+    display: none;
+}
+.column2--desktop__image{
+    display: block;
+    background-image: url(https://qyksonic.imgix.net/zoe-blue.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 45vw;
+}
+.column2--mobile{
+    display: none;
+}
+/* .column2--desktop__image{
+    display: block;
+    background-image: url(https://qyksonic.imgix.net/zoe-blue.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 800px;
+} */
 @media (max-width: 600px) {
     .column__btn .next--top-btn:hover{
      padding: 5px 0 !important;
@@ -1612,6 +1640,12 @@ hr.grey{
     }
 }
 @media (max-width: 900px){
+    .column2--desktop__image{
+        display: none;
+    }
+    .column2--mobile{
+        display: block;
+    }
     .bbb-rating--upper{
         display: none;
     }
