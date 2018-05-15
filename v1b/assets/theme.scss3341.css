@@ -3043,7 +3043,20 @@ h1.product-single__title,
     -webkit-flex: 0 0 100px;
     -moz-flex: 0 0 100px;
     -ms-flex: 0 0 100px;
-    flex: 0 0 100px
+    flex: 0 0 100px;
+}
+@media only screen and (max-width: 430px){
+    .product-form__item--quantity {
+        box-sizing: border-box;
+        -webkit-flex: 0 0 100px;
+        -moz-flex: 0 0 100px;
+        -ms-flex: 0 0 100px;
+        flex: 0 0 100%;
+    }
+    .product-form__item--quantity input{
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
 
 .product-form__item--submit {

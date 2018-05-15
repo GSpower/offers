@@ -746,6 +746,11 @@ float: left;
 .product-form__cart-submit{
 width: 50%;
 }
+@media only screen and (max-width: 430px){
+	.product-form__cart-submit{
+		width: 100% !important;
+	}
+}
 .badges{
 display: flex;
 justify-content: space-between;
@@ -880,7 +885,7 @@ flex-wrap: wrap;
 }
 .color-pick-block label{
 position: absolute;
-    left: 60%;
+	left: 68.7%;
 	display: none;
 }
 .color-pick-container p{
@@ -1059,7 +1064,8 @@ display: none;
         width: 22%;
     }
 	.name-stars .product-single__price{
-		width: 55%;
+		/* width: 55%; */
+		width: 100%;
 		font-size: 1em;
 	}
 
