@@ -37,6 +37,7 @@
 // }
 
 // modal slider
+// window.ch_cust_param = "zlinindza@gmail.com"; 
 $(document).ready(function(){
 	console.log('test');
 	var clickd = false;
@@ -102,21 +103,21 @@ $(document).ready(function(){
         }
 	});
 	// sticky disapear
-	var contentToStart = $('#fix-start');
-	var foot = $('.fixed-footer');
+	// var contentToStart = $('#fix-start');
+	// var foot = $('.fixed-footer');
 	
-	$(document).on('scroll', function() {
+	// $(document).on('scroll', function() {
 		
-		if($(this).scrollTop()>=$('#fix-start').position().top){
-			foot.addClass('fixed-footer--display');
+	// 	if($(this).scrollTop()>=$('#fix-start').position().top){
+	// 		foot.addClass('fixed-footer--display');
 		
-		}
-		if($(this).scrollTop()>=$('#content-stop').position().top){
-			foot.removeClass('fixed-footer--display');
-		}if($(this).scrollTop()<=$('#fix-start').position().top){
-			foot.removeClass('fixed-footer--display');
-		}
-	})
+	// 	}
+	// 	if($(this).scrollTop()>=$('#content-stop').position().top){
+	// 		foot.removeClass('fixed-footer--display');
+	// 	}if($(this).scrollTop()<=$('#fix-start').position().top){
+	// 		foot.removeClass('fixed-footer--display');
+	// 	}
+	// })
 	
 	
 	// footer links
@@ -438,6 +439,38 @@ $(document).ready(function(){
 			fixedHeader.removeClass('fixed-upper-header');			
 		}
 	})
+	
+	// special offer popup
+	var btnForOpeningOfferingPopup = $('.special-offer-open');
+	var btnForClosingOfferingPopup = $('.special-offer-popup__close-btn');
+	
+	var specialOfferPopup = $('.special-offer-popup__wrap');
+	
+	btnForOpeningOfferingPopup.on('click', function () {
+		specialOfferPopup.show();
+	})
+	btnForClosingOfferingPopup.on('click', function () {
+		specialOfferPopup.hide();
+	})
+	// special offer form
+	var offeringPopupEmail = $('#popup-email-address');
+	var offeringPopupPhone = $('#popup-phone-number');
+	var offeringPopupBtn = $('#popup-btn');
+	var offeringHolder = $('#offering-form');
+	
+	offeringPopupBtn.on('click', function (e) {
+		// e.preventDefault();
+		var formEmail = offeringPopupEmail.val();
+		var formPhoneNumb = offeringPopupPhone.val();
+		
+		if(formEmail.length > 0 || formPhoneNumb > 0){
+			offeringHolder.attr('action', 'http://google.rs')
+			
+		}
+		
+	})
+
+	
 	
 	
 });

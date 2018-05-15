@@ -78,8 +78,8 @@ h3.white{
     font-weight: 400;
 }
 .header{
-    /* background-color:#212121; */
-    background-color: rgba(33, 33, 33, 0.9);
+    background-color:#212121;
+    /* background-color: rgba(33, 33, 33, 0.9); */
     padding:15px 0px 15px 0px;
     text-align:center;
     color:#ffffff;
@@ -89,6 +89,8 @@ h3.white{
     margin-bottom:0px;
     margin-top:0px;
     z-index: 100;
+
+    transition: all 300ms ease;
 }
 .navigation{
     background-color:#303030;
@@ -322,7 +324,7 @@ table.center{
     margin-top:0px;
 }
 .footer-pad{
-    padding-bottom: 80px;
+    padding-bottom: 60px;
 }
 .fixed-footer{
     position: fixed;
@@ -337,8 +339,9 @@ table.center{
     text-align: center;
     -webkit-transition: background-color 600ms ease-out;
     transition: background-color 600ms ease-out;
-
-    display: none;
+    display: block;
+    /* display: none; */
+    /* in case of returning js for this, uncomment display none */
 }
 .fixed-footer--display{
     display: block;
@@ -721,6 +724,9 @@ hr.grey{
 }
 .fs-26{
     font-size: 26px;
+}
+.fs-56{
+    font-size: 56px;
 }
 /* font awesome css */
 .fa-instagram{
@@ -1424,11 +1430,91 @@ hr.grey{
     position: fixed;
     top: 0;
     left: 0;
+
+    background-color: rgba(33, 33, 33, 0.9);
 }
 .header__container{
     max-width: 1000px;
     margin: 0 auto;
 }
+/* special offer popup */
+.special-offer-popup__wrap{
+    background: rgba(33,33,33,0.7);
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: none;
+}
+.special-offer-popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translateX(-50%);
+    transform: translateY(-50%); */
+    transform: translate(-50%, -50%);
+    background-color: #212121;
+    width: 700px;
+    max-width: 80%;
+    height: 600px;
+    max-height: 90%;
+    text-align: center;
+}
+.special-offer-popup .column__header{
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 46px;
+}
+.special-offer-popup .column__desc{
+    color: white;
+    font-size: 18px;
+}
+#popup-email-address, #popup-phone-number{
+    width: 400px;
+    max-width: 80%;
+    margin-top: 30px;
+    outline: none;
+    border: 2px solid #f50557;
+    border-radius: 40px;
+    color: white;
+    background-color: #2f2f2f;
+    font-size: 20px;
+    padding: 15px 30px;
+    box-sizing: border-box;
+}
+#popup-email-address::placeholder{
+    color: #999999;
+}
+#popup-phone-number::placeholder{
+    color: #999999;
+}
+#popup-btn{
+    display: block;
+    width: 250px;
+    max-width: 80%;
+    margin: 30px auto;
+    /* border: 2px solid white; */
+    border: none;
+    border-radius: 40px;
+    color: white;
+    background-color: #f50557;
+    font-size: 20px;
+    padding: 15px;
+    outline: none;
+}
+.special-offer-popup__close-btn{
+    position: fixed;
+    top: 1%;
+    right: 2%;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+}
+
 @media (max-width: 600px) {
     .column__btn .next--top-btn:hover{
      padding: 5px 0 !important;
@@ -1443,6 +1529,9 @@ hr.grey{
         border-radius: 40px;
         font-size: 12px;
         font-weight: 400;
+    }
+    .fs-56{
+        font-size: 26px !important;
     }
     .bbb-rating--upper{
         display: none;
@@ -1685,6 +1774,9 @@ hr.grey{
     }
 }
 @media (max-width: 900px){
+    .fs-56{
+        font-size: 36px;
+    }
     .column2--desktop__image{
         display: none;
     }

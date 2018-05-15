@@ -343,14 +343,42 @@
   <span class="footer-link copyright-footer">
     © 2018
     <a href="../index.html">QYKSONIC</a>
-    ALL RIGHTS RESERVED 
+    ALL RIGHTS RESERVED
   </span>
 </div>
-  <a href="../index.html#content-stop" style="text-decoration:none;">
-    <div class="fixed-footer">
-      <p>Get yours now &#x279C;</p>
+<a href="#" class="special-offer-open" style="text-decoration:none;">
+  <div class="fixed-footer">
+    <p>Special offer &#x279C;</p>
     </div>
   </a>
+  <!-- special offer popup -->
+  <div class="special-offer-popup__wrap">
+      <div class="special-offer-popup">
+        <div class="special-offer-popup__close-btn">
+          <i class="fa fa-times"></i>
+        </div>
+        <h2 class="column__header">
+          special offer
+        </h2>
+        <div class="column__desc">
+          <p>
+            Enter your e-mail address or phone number
+          </p>
+        </div>
+        <form id="offering-form" action="#">
+          <input type="email" name="email address" id="popup-email-address" placeholder="E-mail">
+          <input name="phone number" id="popup-phone-number" placeholder="Phone number">
+          <input type="submit" id="popup-btn">
+        </form>
+      </div>
+    </div>
+<!-- player overlay -->
+    <div class="video-overlay-popup__video-wrap">
+      <iframe id="video-1" width="560" height="315" src="https://www.youtube-nocookie.com/embed/T5VPqD_c5uY?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="video-overlay-popup__close-btn">
+        <i class="fa fa-times"></i>
+      </div>
+    </div>
 
   <!-- scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
