@@ -90,6 +90,8 @@ h3.white{
     margin-top:0px;
     z-index: 100;
 
+    -webkit-transition: all 300ms ease;
+
     transition: all 300ms ease;
 }
 .navigation{
@@ -1455,7 +1457,8 @@ hr.grey{
     left: 50%;
     /* transform: translateX(-50%);
     transform: translateY(-50%); */
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     background-color: #212121;
     width: 700px;
     max-width: 80%;
@@ -1484,9 +1487,22 @@ hr.grey{
     background-color: #2f2f2f;
     font-size: 20px;
     padding: 15px 30px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+#popup-email-address::-webkit-input-placeholder{
+    color: #999999;
+}
+#popup-email-address:-ms-input-placeholder{
+    color: #999999;
 }
 #popup-email-address::placeholder{
+    color: #999999;
+}
+#popup-phone-number::-webkit-input-placeholder{
+    color: #999999;
+}
+#popup-phone-number:-ms-input-placeholder{
     color: #999999;
 }
 #popup-phone-number::placeholder{
