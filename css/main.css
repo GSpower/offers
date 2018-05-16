@@ -1448,6 +1448,7 @@ hr.grey{
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 2000;
 
     display: none;
 }
@@ -1475,6 +1476,10 @@ hr.grey{
 .special-offer-popup .column__desc{
     color: white;
     font-size: 18px;
+}
+.offering-form__msg{
+    color: #f50557;
+    padding: 0 5px;
 }
 #popup-email-address, #popup-phone-number{
     width: 400px;
@@ -1548,6 +1553,17 @@ hr.grey{
     }
     .fs-56{
         font-size: 26px !important;
+    }
+    #popup-email-address, #popup-phone-number{
+        margin-top: 15px;
+    }
+    .qyksonic-logo{
+        margin: 10px auto;
+    }
+    .zoe-logo{
+        margin: 0 auto;
+        width: 69px;
+        height: 22px;
     }
     .bbb-rating--upper{
         display: none;

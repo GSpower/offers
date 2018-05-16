@@ -457,15 +457,27 @@ $(document).ready(function(){
 	var offeringPopupPhone = $('#popup-phone-number');
 	var offeringPopupBtn = $('#popup-btn');
 	var offeringHolder = $('#offering-form');
+	var offeringMsg = $('.offering-form__msg');
 	
 	offeringPopupBtn.on('click', function (e) {
-		// e.preventDefault();
+		e.preventDefault();
 		var formEmail = offeringPopupEmail.val();
 		var formPhoneNumb = offeringPopupPhone.val();
 		
 		if(formEmail.length > 0 || formPhoneNumb > 0){
-			offeringHolder.attr('action', 'http://google.rs')
-			
+			$.post('https://offers.qyksonic.com/test/offer.php', { email: formEmail, phone: formPhoneNumb }, function(response) {
+				if (response.success == 1) {
+					// console.log("Success!");
+					window.location.href='https://qyksonic.com/products/zoe%E2%84%A2-special-offer';
+					
+				} else if (response.error < 0) {
+					// console.log("Failed to send data");
+					offeringMsg.text("Invalid e-mail address, please try again.")
+				}
+			});
+		}else{
+			// console.log("fill one of inputs");
+			offeringMsg.text("Please enter your e-mail address or phone number.")
 		}
 		
 	})
