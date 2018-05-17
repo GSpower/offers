@@ -1463,7 +1463,8 @@ hr.grey{
     background-color: #212121;
     width: 700px;
     max-width: 80%;
-    height: 600px;
+
+    min-height: 400px;
     max-height: 90%;
     text-align: center;
 }
@@ -1557,6 +1558,7 @@ hr.grey{
     #popup-email-address, #popup-phone-number{
         margin-top: 15px;
     }
+    
     .qyksonic-logo{
         margin: 10px auto;
     }

@@ -386,12 +386,14 @@ $(document).ready(function(){
 	}
 	
 	// modal player
-	var openBtnModalPlayer = $('#open-video-modal');
+	var openBtnModalPlayer = $('.open-video-modal');
 	var closeBtnModalPlayer = $('.video-overlay-popup__close-btn');
 	var modalPlayer = $('.video-overlay-popup__video-wrap');
 	var windowBody = $('body');
 	var videoInsideModal = $('#video-1');
 	openBtnModalPlayer.on('click', function () {
+		console.log("modal modal");
+		
 		modalPlayer.addClass('video-overlay-popup__video-wrap--active');
 		windowBody.addClass('body-fix');
 	})
@@ -426,7 +428,7 @@ $(document).ready(function(){
 			wordCounter = 0;
 		}
 	}
-	setInterval(wordAnimator, 1500);
+	setInterval(wordAnimator, 1000);
 
 	// fixed top header
 	var fixedHeader = $('.header');
