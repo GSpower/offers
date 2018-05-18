@@ -97,9 +97,9 @@
 <!-- pre-footer -->
 <section class="above-footer">
   <div class="above-footer__wrapper">
-    <div class="email-updates">
+    <!-- <div class="email-updates">
       <p>Placeholder for newsletter</p>
-    </div>
+    </div> -->
 
     <div class="footer-column-holder">
 
@@ -163,7 +163,10 @@
               <a href="https://qyksonic.com/pages/store-locator">store locations</a>
             </li>
           </ul>
+          <div class="bbb-rating--upper">
+              <a href="https://www.bbb.org/sdoc/business-reviews/skin-care/qyksonic-in-huntington-beach-ca-172021097/#sealclick" target="_blank" rel="nofollow"><img src="https://seal-sandiego.bbb.org/seals/blue-seal-200-65-bbb-172021097.png" style="border: 0;" alt="Qyksonic BBB Business Review" /></a>
         </div>
+      </div>
       </div>
 
     <div class="footer-payments">
@@ -197,13 +200,18 @@
         </li>
       </ul>
     </div>
-  </div>
+    <div class="bbb-rating--lower">
+        <a href="https://www.bbb.org/sdoc/business-reviews/skin-care/qyksonic-in-huntington-beach-ca-172021097/#sealclick" target="_blank" rel="nofollow"><img src="https://seal-sandiego.bbb.org/seals/blue-seal-200-65-bbb-172021097.png" style="border: 0;" alt="Qyksonic BBB Business Review" /></a>
+      </div>
+    </div>
 </section>
 
 
 
 <div class="footer footer-pad">
-  <img src="https://www.healthforest.net/test/qyksonic-zoe-logo.png" class="centerImageFooter">
+    <div class="footer-logo__holder">
+        <img src="https://qyksonic.imgix.net/qyksonic-zoe-footer-logo.png"  class="centerImageFooter">
+      </div>
   <div class="footer-socials">
       <ul class="footer-socials__list">
         <li class="footer-socials__items">
@@ -245,21 +253,43 @@
         <div class="special-offer-popup__close-btn">
           <i class="fa fa-times"></i>
         </div>
-        <h2 class="column__header">
-          special offer
-        </h2>
-        <div class="column__desc">
-          <p>
-            Enter your e-mail address or phone number
-          </p>
+        <div class="triangle triangle--tl"></div>
+      <div class="triangle triangle--tr"></div>
+      <div class="special-offer-text">
+        <span class="special-offer-text__top-text">
+          LIMITED EXCLUSIVE OFFER
+        </span>
+        <span class="special-offer-text__price-off">
+          50% OFF <span class="offer-star">*</span>
         </div>
+        <div class="special-offer-text__price-holder">
+          <span class="special-offer-text__price-with-no-off">
+            $199.00
+          </span>
+          <span class="special-offer-text__price-now">
+            $99.00
+          </span>
+        </div>
+        <span class="special-offer-text__free-ship">
+            PLUS FREE SHIPPING
+          </span>
+          <span class="special-offer-text__limit-one">
+            *LIMIT 1 PER PERSON
+          </span>
+          <span class="special-offer-text__fill-inputs">
+            Enter E-Mail or Phone Number to Access
+          </span>
+          <div class="triangle triangle--bl"></div>
+          <div class="triangle triangle--br"></div>
+          <span class="offering-form__msg"></span>
         <form id="offering-form" action="#">
-          <input type="email" name="email address" id="popup-email-address" placeholder="E-mail">
-          <input name="phone number" id="popup-phone-number" placeholder="Phone number">
+            <input type="email" name="email_address" id="popup-email-address" placeholder="E-mail">
+            <input name="phone_number" id="popup-phone-number" placeholder="Phone number">
           <input type="submit" id="popup-btn">
         </form>
       </div>
     </div>
+
 <!-- player overlay -->
     <div class="video-overlay-popup__video-wrap">
       <iframe id="video-1" width="560" height="315" src="https://www.youtube-nocookie.com/embed/T5VPqD_c5uY?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -272,6 +302,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/widget1.js"></script>
 </body>
 
 </html>

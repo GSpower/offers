@@ -38,8 +38,26 @@
 
 // modal slider
 // window.ch_cust_param = "zlinindza@gmail.com"; 
+// console.log("pre svega");
+
+// special offer popup
+var btnForOpeningOfferingPopup = $('.special-offer-open');
+var btnForClosingOfferingPopup = $('.special-offer-popup__close-btn');
+
+var specialOfferPopup = $('.special-offer-popup__wrap');
+
+btnForOpeningOfferingPopup.on('click', function () {
+	specialOfferPopup.show();
+})
+btnForClosingOfferingPopup.on('click', function () {
+	specialOfferPopup.hide();
+})
+
+
 $(document).ready(function(){
-	console.log('test');
+	// console.log("doc ready");
+	
+	// console.log('test');
 	var clickd = false;
 	var item = $('.column3x3');
 	var sliderModal = $('.modal-slider');
@@ -367,12 +385,12 @@ $(document).ready(function(){
 	var videosHigh = [
 		"https://content.jwplatform.com/videos/v1ezK8tI-T5UwtF42.mp4",
 		"https://content.jwplatform.com/videos/BDZ0YZOk-T5UwtF42.mp4",
-		"https://content.jwplatform.com/videos/uMKZsA89-T5UwtF42.mp4"
+		"https://content.jwplatform.com/videos/bkS6D7SW-RxV8WVqH.mp4"
 	];
 	var videosLow = [
 		"https://content.jwplatform.com/videos/v1ezK8tI-RxV8WVqH.mp4",
 		"https://content.jwplatform.com/videos/BDZ0YZOk-Nz8Uvbt5.mp4",
-		"https://content.jwplatform.com/videos/uMKZsA89-RxV8WVqH.mp4"
+		"https://content.jwplatform.com/videos/bkS6D7SW-RxV8WVqH.mp4"
 	];
 
 	if (windowWidth >= 1000) {
@@ -428,7 +446,7 @@ $(document).ready(function(){
 			wordCounter = 0;
 		}
 	}
-	setInterval(wordAnimator, 1000);
+	setInterval(wordAnimator, 800);
 
 	// fixed top header
 	var fixedHeader = $('.header');
@@ -442,25 +460,14 @@ $(document).ready(function(){
 		}
 	})
 	
-	// special offer popup
-	var btnForOpeningOfferingPopup = $('.special-offer-open');
-	var btnForClosingOfferingPopup = $('.special-offer-popup__close-btn');
 	
-	var specialOfferPopup = $('.special-offer-popup__wrap');
-	
-	btnForOpeningOfferingPopup.on('click', function () {
-		specialOfferPopup.show();
-	})
-	btnForClosingOfferingPopup.on('click', function () {
-		specialOfferPopup.hide();
-	})
-	// special offer form
+	// special offer form - must be loaded before DOM is ready
 	var offeringPopupEmail = $('#popup-email-address');
 	var offeringPopupPhone = $('#popup-phone-number');
 	var offeringPopupBtn = $('#popup-btn');
 	var offeringHolder = $('#offering-form');
 	var offeringMsg = $('.offering-form__msg');
-	
+
 	offeringPopupBtn.on('click', function (e) {
 		e.preventDefault();
 		var formEmail = offeringPopupEmail.val();
@@ -474,11 +481,13 @@ $(document).ready(function(){
 					
 				} else if (response.error < 0) {
 					// console.log("Failed to send data");
+					offeringMsg.addClass('offering-form__msg--bl')
 					offeringMsg.text("Invalid e-mail address, please try again.")
 				}
 			});
 		}else{
 			// console.log("fill one of inputs");
+			offeringMsg.addClass('offering-form__msg--bl');
 			offeringMsg.text("Please enter your e-mail address or phone number.")
 		}
 		
