@@ -1408,36 +1408,47 @@ hr.grey{
     line-height: 100%;
 }
 .special-offer-text__price-off{
-    font-size: 4rem;
+    font-size: 2.2rem;
     color: white;
     letter-spacing: 5px;
     display: block;
-    line-height: 135%; 
+    line-height: 135%;
+    font-weight: 700; 
 }
-.special-offer-text .offer-star{
-    color: white;
-}
+
 .special-offer-text__price-holder{
     display: block;
     font-size: 4rem;
     line-height: 100%;    
 }
 .special-offer-text__price-with-no-off{
-    color: #e0d9d0;
+    color: #fff;
     text-decoration: line-through;
-    -webkit-text-decoration-color: #e09a71;
-            text-decoration-color: #e09a71;
+    -webkit-text-decoration-color: #fdfe4a;
+            text-decoration-color: #fdfe4a;
+    font-size: 2.2rem;
+    letter-spacing: 5px;
+    display: block;
+    line-height: 135%;
+    font-weight: 700;
 }
-.special-offer-text__price-now{
+.special-offer-text__see-price{
     color: #fdfe4a;
+    font-size: 2.2rem;
+    letter-spacing: 5px;
+    background-color: #212121;
+    line-height: 135%;
+    padding: 0 10px;
+    font-weight: 700;
 }
 .special-offer-text__free-ship{
+    margin-top: 9px;
     color: #fdfe4a;
     font-size: 1rem;
     display: block;
     letter-spacing: 5px;
     line-height: 100%;
-    font-weight: 200;
+    font-weight: 400;
 }
 .special-offer-text__limit-one{
     color: white;
@@ -1446,7 +1457,7 @@ hr.grey{
     letter-spacing: 5px;
 }
 .special-offer-text__fill-inputs{
-    color: white;
+    color: #fdfe4a;
     font-size: 1.2rem;
 }
 .offering-form__msg--bl{
@@ -1468,6 +1479,9 @@ hr.grey{
     padding: 15px 30px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+}
+#popup-phone-number{
+    display: none;
 }
 #popup-email-address{
     margin-top: 10px;
